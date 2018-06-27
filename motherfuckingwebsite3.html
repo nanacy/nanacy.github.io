@@ -4,15 +4,41 @@
 	<meta charset="UTF-8">
 	<title>my best motherfucking website</title>
 	<link rel="stylesheet" href="beststyle.css"/>
+
+	<!-- BOUTONS PSYCHEDELIQUE -->
+	<script type="text/javascript" language="javascript">
+		function psy(){
+			var texteBouton = document.getElementById("bout1");
+			var myBouton = document.querySelector("body");
+			var paragraphes = document.querySelectorAll("p");
+
+			if(texteBouton.innerHTML=="Mode Psychédélique"){
+				myBouton.style.backgroundColor = "magenta";
+				texteBouton.innerHTML = "Mode Normal";
+				for(var i=0; i<paragraphes.length; i++){
+					paragraphes[i].style.color="blue";
+				}
+			}
+			else{
+				myBouton.style.backgroundColor = "white";
+				texteBouton.innerHTML = "Mode Psychédélique";
+				for(var i=0; i<paragraphes.length; i++){
+					paragraphes[i].style.color="#696969";
+				}
+			}
+		}
+	</script>
 </head>
 
 <body>
 	<div id="global">
 		<div id="entete">
-			<a href="" class="button"><span class="add">Add more contrast</span></a> <br><br>
-			<a href="" class="button"><span class="invert">Inverted mode</span></a>
+			<!-- LES BOUTONS -->		
+			<button onClick="psy()" id="bout1" class="button">Mode Psychédélique</button> <br><br>
+			<button onclick="" class="button">Inverted mode</button>
 		</div><!-- entete -->
 
+		<!-- LE SITE -->
 		<div id="navigation">
 			<h1>This is the best motherfucking website.</h1>
 			<p>Really, it is.</p>
@@ -121,5 +147,7 @@
 		</div><!-- pied -->
 
 	</div><!-- global -->
+
+	<script src="hello.js"></script>
 </body>
 </html>
