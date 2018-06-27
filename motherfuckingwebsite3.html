@@ -11,12 +11,18 @@
 			var texteBouton = document.getElementById("bout1");
 			var myBouton = document.querySelector("body");
 			var paragraphes = document.querySelectorAll("p");
+			var header = document.querySelectorAll("h1, h2, h3");
 
 			if(texteBouton.innerHTML=="Mode Psychédélique"){
 				myBouton.style.backgroundColor = "magenta";
 				texteBouton.innerHTML = "Mode Normal";
 				for(var i=0; i<paragraphes.length; i++){
 					paragraphes[i].style.color="blue";
+					paragraphes[i].style.fontFamily = "Times New Roman"; 
+				}
+				for(var j=0; j<header.length; j++){
+					header[j].style.color = "green";
+					header[j].style.fontFamily = "Times New Roman"; 
 				}
 			}
 			else{
@@ -24,6 +30,11 @@
 				texteBouton.innerHTML = "Mode Psychédélique";
 				for(var i=0; i<paragraphes.length; i++){
 					paragraphes[i].style.color="#696969";
+					paragraphes[i].style.fontFamily = "Arial"; 
+				}
+				for(var j=0; j<header.length; j++){
+					header[j].style.color = "#696969";
+					header[j].style.fontFamily = "Arial"; 
 				}
 			}
 		}
